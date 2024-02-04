@@ -17,6 +17,20 @@
 .nav{
     background-color: blue;
     grid-column: 2/4;
+    display: flex;
+}
+
+.navLeft, .navRight{
+    display: flex;
+}
+
+.navLeft{
+    flex: 1;
+}
+
+.navRigth{
+    flex: 1;
+    justify-content: flex-end;
 }
 
 .menu{
