@@ -1,7 +1,8 @@
 :root{
-    --primary-color: #4f46e5;
+    --primary-color: #1e3a8a;
     --primary-text-color: white;
     --secondary-color: white;
+    --background-color: #e6e6e6;
     --sidebarH1-font: 2rem;
     --sidebar-font: 1.3rem;
 
@@ -16,7 +17,7 @@
 .container{
     display: grid;
     height: 100vh;
-    grid-template-columns: repeat(1, minmax(150px, 280px)) 4fr;
+    grid-template-columns: repeat(1, minmax(200px, 280px)) 4fr;
     grid-template-rows: auto auto 1fr;
 }
 
@@ -28,6 +29,7 @@
     grid-row: 1/4;
     display: flex;
     flex-direction: column;
+    overflow: auto;
     gap: 25px;
 }
 
@@ -79,21 +81,28 @@
     background-color: var(--secondary-color);
     grid-column: 2/4;
     display: flex;
-    align-items: center;
-    gap: 60px;
-    padding: 20px 35px;
+    gap: 35px;
+    padding: 25px 45px;
 }
 
 
 .navLeft, .navRight{
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 1rem;
+}
+
+.navRight{
+    gap: 2rem;
 }
 
 .searchIcon, .notificationIcon {
     display: flex;
     align-items: center;
+}
+
+.searchIcon span, .notificationIcon span{
+    font-size: 2rem;
 }
 
 .navLeft{
@@ -104,28 +113,70 @@
     flex: 1;
     border-radius: 45px;
     border: none;
-    background-color: #e7e5e4;
+    width: 100%;
+    background-color: var(--background-color);
     padding: 10px 20px;
+}
+
+.profilePhoto img{
+    width: 2.6rem;
+}
+
+.profileName h3{
+    font-size: 1.4rem;
 }
 
 
 
 
 /* Main Menu */
-.menu{padding: 20px 35px;
+.menu
+{
     background-color: var(--secondary-color);
     grid-column: 2/4;
     display: flex;
     align-items: center;
-    padding: 20px 35px;
+    padding: 25px 45px;
 }
 
 .menu1{
     flex: 1;
+    display: flex;
+    gap: 25px;
 }
 
+.profileMainPhoto img{
+    width: 5rem;
+}
+
+.menu2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    border: none;
+}
+
+.menu2 button{
+    padding: 10px 30px;
+    border: none;
+    border-radius: 45px;
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.menu2 button:hover{
+    background-color: #486bca;
+}
+
+
+
+
+
 .content{
-    background-color: yellow;
+    background-color: var(--background-color);
     display: grid;
     grid-template-columns: 3fr 1fr;
 }
