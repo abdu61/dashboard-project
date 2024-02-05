@@ -1,43 +1,137 @@
+:root{
+    --primary-color: #4f46e5;
+    --primary-text-color: white;
+    --secondary-color: white;
+    --sidebarH1-font: 2rem;
+    --sidebar-font: 1.3rem;
+
+}
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 .container{
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    height: 100vh;
+    grid-template-columns: repeat(1, minmax(150px, 280px)) 4fr;
+    grid-template-rows: auto auto 1fr;
 }
 
+/* SideBar */
 .sidebar{
-    background-color: aqua;
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
     grid-column: 1/2;
     grid-row: 1/4;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
+.header{
+    display: flex;
+    align-items: center;
+    padding: 25px 0px;
+    padding-left: 20px;
+    gap: 5px;
+}
+
+.header > span{
+    font-size: 2.5rem;    
+}
+
+.header > h1{
+    font-size: var(--sidebarH1-font);    
+}
+
+.sidebarClass1, .sidebarClass2{
+    font-size: var(--sidebar-font);
+    font-weight: 600;
+    padding-left: 26px;
+}
+
+.sidebarMenu1 > li span, .sidebarMenu2 > li span{
+    font-size: 1.8rem;
+}
+
+.sidebar ul li{
+    list-style: none;
+    padding: 10px 0px;
+}
+
+.sidebar a:link, .sidebar a:visited{
+    color: var(--primary-text-color);
+    text-decoration: none;
+}
+
+.sidebarLink{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+/*  Nav Bar */
 .nav{
-    background-color: blue;
+    background-color: var(--secondary-color);
     grid-column: 2/4;
     display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 20px 35px;
 }
+
 
 .navLeft, .navRight{
     display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.searchIcon, .notificationIcon {
+    display: flex;
+    align-items: center;
 }
 
 .navLeft{
     flex: 1;
 }
 
-.navRigth{
+.nav input{
     flex: 1;
-    justify-content: flex-end;
+    border-radius: 45px;
+    border: none;
+    background-color: #e7e5e4;
+    padding: 10px 20px;
 }
 
-.menu{
-    background-color: green;
+
+
+
+/* Main Menu */
+.menu{padding: 20px 35px;
+    background-color: var(--secondary-color);
     grid-column: 2/4;
+    display: flex;
+    align-items: center;
+    padding: 20px 35px;
+}
+
+.menu1{
+    flex: 1;
 }
 
 .content{
     background-color: yellow;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.contentBox{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: auto;
 }
