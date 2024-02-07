@@ -5,6 +5,7 @@
     --background-color: #e6e6e6;
     --sidebarH1-font: 2rem;
     --sidebar-font: 1.3rem;
+    --accent-color: #ffd41d;
 
 }
 
@@ -146,7 +147,7 @@
 }
 
 .profileMainPhoto img{
-    width: 5rem;
+    width: 4.6rem;
 }
 
 .menu2{
@@ -157,7 +158,7 @@
 }
 
 .menu2 button{
-    padding: 10px 30px;
+    padding: 10px 25px;
     border: none;
     border-radius: 45px;
     background-color: var(--primary-color);
@@ -179,10 +180,75 @@
     background-color: var(--background-color);
     display: grid;
     grid-template-columns: 3fr 1fr;
+    grid-auto-rows: min-content 1fr;
+    overflow: auto;
+    padding: 15px;
+}
+
+.content1{
+    padding: 10px;
+}
+
+.content1 h3, .content2 h3, .content3 h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+
 }
 
 .contentBox{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    overflow: auto;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.projects{
+    display: grid;
+    grid-template-rows: 1fr auto;
+    padding: 25px;
+    min-width: 350px;
+    height: 250px;
+
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    border-left: 8px solid var(--primary-color);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.projects h3{
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.projects p{
+    max-height: 170px;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+}
+
+.contentActions{
+    display: flex;
+    gap: 1.2rem;
+    justify-content: end;
+}
+
+.contentActions span{
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.content2{
+    padding: 10px;
+    grid-column: 2/3;
+}
+
+.content3{
+    padding: 10px;
+    grid-column: 2/3;
 }
