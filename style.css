@@ -242,6 +242,8 @@ a{
 }
 
 .projects p{
+    font-size: 1rem;
+    color: #666;
     max-height: 170px;
     display: -webkit-box;
     text-overflow: ellipsis;
