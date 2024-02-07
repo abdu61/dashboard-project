@@ -89,7 +89,7 @@ a{
 
 
 
-/*  Nav Bar */
+/*  Nav Bar - Top with Search Bar*/
 .nav{
     background-color: var(--secondary-color);
     grid-column: 2/4;
@@ -143,7 +143,7 @@ a{
 
 
 
-/* Main Menu */
+/* Main Menu - One with Profile and Buttons*/
 .menu
 {
     background-color: var(--secondary-color);
@@ -190,6 +190,7 @@ a{
 
 
 /* Main Content */
+/* content1 Box is for Projects, content2 Box is for Announcements, content3 Box is for Trending */
 .content{
     background-color: var(--background-color);
     display: grid;
